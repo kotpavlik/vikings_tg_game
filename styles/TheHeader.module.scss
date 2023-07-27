@@ -1,0 +1,209 @@
+
+.header_styles {
+       @apply
+        bg-over-gray
+        fixed
+        top-0
+        z-50 
+        h-11 
+        flex 
+        flex-row 
+        w-full 
+        items-center;
+   
+    .header_wrapper {
+        @apply 
+        flex 
+        flex-row 
+        w-full 
+        items-center 
+        justify-between 
+        mx-4;
+        .name_game {
+            @apply 
+            font-extrabold 
+            text-white
+            not-italic 
+            absolute 
+            lg:left-24 
+            top-3 
+            text-sm
+            left-[10px] ;
+        }
+        .links_wrapper {
+            @apply  
+            absolute 
+            top-[44px]
+            left-0
+            bg-light-gray
+            animate-leftIn
+            lg:relative 
+            lg:left-0
+            lg:top-0
+            lg:bg-transparent;
+            .flex_wrapper {
+                @apply
+                flex 
+                flex-col 
+                items-center
+                w-screen 
+                h-screen
+                z-10 
+                lg:block 
+                lg:w-full
+                lg:h-full
+                lg:text-center 
+                lg:space-x-10 ;
+            .header_link {
+                @apply 
+               lg:text-white 
+                lg:w-10 
+                lg:text-xs 
+                lg:font-semibold 
+                text-over-gray
+                font-bold
+                text-4xl
+                mt-7;
+                &:hover {
+                    @apply 
+                    bg-gradient-to-b 
+                    from-bereza 
+                    to-link-blue 
+                    bg-clip-text 
+                    text-transparent 
+                    ease-linear 
+                    duration-300;
+                }
+            }
+            }   
+            .instagram_link{
+                @apply absolute bottom-10  w-screen text-center h-20;
+                .instagram_block {
+                    @apply flex justify-between w-24 h-10 mx-auto;
+                    >span {
+                        @apply text-sm font-normal m-auto;
+                    }
+                }
+            }
+        }
+        .links_hidden{
+            @apply hidden lg:block;
+        }
+        .search_wrapper {
+            @apply 
+            lg:px-1 
+            m-2
+            text-white 
+            flex 
+            flex-row 
+            items-center 
+            justify-center 
+            h-full 
+            select-none 
+            cursor-pointer
+            w-10;
+            .search_icon {
+                @apply 
+                relative 
+                w-full 
+                h-full 
+                fill-blue;
+                .around_search {
+                    @apply 
+                    absolute 
+                    -top-[8px] 
+                    -left-1
+                    min-w-[15.75px] 
+                    min-h-[15.75px]
+                    lg:left-0 ;
+                }
+                .stick_search {
+                    @apply 
+                    absolute 
+                    top-[5px] 
+                    left-[8px]
+                    min-w-[4.58px] 
+                    min-h-[4.58px]
+                    lg:left-[11.5px] ;
+                }
+            }
+            .search {
+                @apply 
+                lg:block
+                p-1 
+                text-white 
+                w-10 
+                text-xs 
+                mx-7 
+                font-semibold
+                hidden ;
+            }
+        }
+        .burger_wrapper{
+            @apply
+            absolute
+            block
+            right-[10px]
+            w-6
+            h-full
+            lg:hidden;
+            .burger{
+                @apply
+                absolute
+                left-0
+                w-full
+                h-full
+                z-20;
+                &:before,&:after{
+                    @apply 
+                    content-['']
+                    bg-white
+                    absolute
+                    left-0
+                    w-full
+                    h-0.5
+                    ease-linear 
+                    duration-300;
+                }
+                &:after{
+                    @apply
+                    bottom-3.5
+                }
+                &:before{
+                    @apply 
+                    top-3.5
+                }
+                >span {
+                    @apply 
+                     bg-white
+                    absolute
+                    left-0
+                    bottom-[21px]
+                    w-full
+                    h-0.5
+                }
+            }
+             .burger_is_open{
+         
+                  &:before{
+                    @apply
+                    top-[21px] 
+                    rotate-45
+                    ease-linear 
+                    duration-300;
+                    }
+                    &:after{
+                    @apply
+                    bottom-[21px]
+                    -rotate-45
+                    ease-linear 
+                    duration-300;
+                    }
+                    >span{
+                        @apply hidden
+                    }
+                }
+        }
+          
+    }
+}
