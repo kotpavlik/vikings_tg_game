@@ -9,7 +9,7 @@ import TheFooter from '@/components/TheFooter'
 export const inter = Inter({ subsets: ['cyrillic', 'latin'], style: 'normal' })
 export const murecho = Murecho({ subsets: ['cyrillic', 'latin'], style: 'normal' })
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Vikings',
   description: 'Main page about telegram game Vikings',
 
